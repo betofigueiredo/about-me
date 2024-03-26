@@ -20,11 +20,6 @@ const help = (typed: string) => (
         <span className="text-cyan-500">curiosities</span>{" "}
         <span className="text-slate-800">---</span> some personal stuff
       </div>
-      <div>
-        <span className="text-cyan-500">reading</span>{" "}
-        <span className="text-slate-800">-------</span> books I'm currently
-        reading
-      </div>
     </div>
     <div className="pt-6 pl-10">
       <div className="pb-2 text-slate-400">CLI commands:</div>

@@ -15,7 +15,7 @@ const projects = (typed: string) => (
     <div className="text-slate-700 pl-10 pt-2">-------</div>
     <Project
       title="Sudoku Board"
-      description="I've wanted to study Svelte for some time, but I didn't have any project for it. I like Sudoku, and it provides some good challenges during development."
+      description="I've wanted to try Svelte for some time, but I didn't have any project for it. I like Sudoku, and it provided some good challenges during development."
       technologies={["SvelteKit", "Typescript", "Tailwind"]}
       status="DONE"
       link="https://betofigueiredo.github.io/sudoku/"
@@ -23,7 +23,7 @@ const projects = (typed: string) => (
     <div className="text-slate-700 pl-10 pt-2">-------</div>
     <Project
       title="Drum Machine"
-      description="I worked in an audio project in the past and always wanted to create a more complete drum machine for the browser."
+      description="Around 2013, I worked on an audio project and always wanted to create a more complete drum machine for the browser. I thought about the possibility for users to save their beats and upload audio presets, but it would demand time that I don't have right now. Getting back soon."
       technologies={["React", "Typescript", "Tailwind", "Flask"]}
       status="ONGOING"
       link="https://github.com/betofigueiredo/drums-synthesizer"

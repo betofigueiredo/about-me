@@ -1,12 +1,13 @@
 commands:
- - welcome
- - commands (same as help)
- - help
- - about
- - goto
- - projects
- - curiosities
- - reading
+
+- welcome
+- commands (same as help)
+- help
+- about
+- goto
+- projects
+- curiosities
+- reading
 
 curiosity --list
 
@@ -17,4 +18,3 @@ autocomplete
 welcome message (typing)
 
 type about automatic
-

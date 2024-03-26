@@ -23,21 +23,36 @@ const about = (typed: string) => (
       <div>
         <a
           className="text-teal-400 hover:underline hover:text-teal-300"
-          href="https://www.instagram.com/_betofigueiredo"
+          href="https://github.com/betofigueiredo"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Instagram
+          Github
         </a>{" "}
         /{" "}
         <a
           className="text-teal-400 hover:underline hover:text-teal-300"
           href="https://www.linkedin.com/in/betof/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           LinkedIn
         </a>{" "}
         /{" "}
         <a
           className="text-teal-400 hover:underline hover:text-teal-300"
+          href="https://www.instagram.com/_betofigueiredo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>{" "}
+        /{" "}
+        <a
+          className="text-teal-400 hover:underline hover:text-teal-300"
           href="https://www.goodreads.com/betofigueiredo"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Goodreads
         </a>

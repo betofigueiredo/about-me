@@ -38,6 +38,8 @@ const Project = ({
           <a
             className="text-teal-400 hover:underline hover:text-teal-300"
             href={link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {link}
           </a>

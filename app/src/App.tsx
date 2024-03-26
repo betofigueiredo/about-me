@@ -10,21 +10,18 @@ function App() {
   const [history, setHistory] = useState<string[]>([]);
   const savedCallback = useRef<(e: KeyboardEvent) => void>();
 
-  // useWelcomeAutoStart({ setTyped, setCommands });
-
-  // TODO: ArrowTop get last command
-  // TODO: placeholder on the start
-
-  useEffect(() => {}, []);
+  useWelcomeAutoStart({ setTyped, setCommands });
 
   function callback(e: KeyboardEvent) {
-    e.preventDefault();
     if (e.key === "ArrowUp" && typed === "") {
       const lastTyped = history[history.length - 1];
-      setTyped(lastTyped);
-      return;
+      if (lastTyped) {
+        setTyped(lastTyped);
+        return;
+      }
     }
     if (!allowedKeys.includes(e.key)) return;
+    e.preventDefault();
     if (e.key === "Backspace") {
       setTyped((prev) => prev.slice(0, -1));
       return;
@@ -55,7 +52,6 @@ function App() {
         savedCallback.current(e);
       }
     }
-
     document.addEventListener("keydown", handleKeyDown);
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
@@ -63,7 +59,7 @@ function App() {
   }, []);
 
   return (
-    <div className="container p-12 font-mono">
+    <div className="container p-8 font-mono">
       <div className="relative inline w-auto text-xl">
         {commands.map((command, index) => (
           <div key={index}>{command}</div>

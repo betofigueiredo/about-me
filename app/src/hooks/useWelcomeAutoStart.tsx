@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { actions } from "../actions";
+import { actions } from "../commands/actions";
 
 const useWelcomeAutoStart = ({
   setTyped,
@@ -9,18 +9,16 @@ const useWelcomeAutoStart = ({
   setCommands: (value: React.SetStateAction<React.ReactElement[]>) => void;
 }): void => {
   useEffect(() => {
-    setTimeout(() => setTyped((prev) => prev + "w"), 300);
-    setTimeout(() => setTyped((prev) => prev + "e"), 400);
-    setTimeout(() => setTyped((prev) => prev + "l"), 580);
-    setTimeout(() => setTyped((prev) => prev + "c"), 900);
-    setTimeout(() => setTyped((prev) => prev + "o"), 1000);
-    setTimeout(() => setTyped((prev) => prev + "m"), 1100);
-    setTimeout(() => setTyped((prev) => prev + "e"), 1200);
+    setTimeout(() => setTyped((prev) => prev + "a"), 300);
+    setTimeout(() => setTyped((prev) => prev + "b"), 400);
+    setTimeout(() => setTyped((prev) => prev + "o"), 580);
+    setTimeout(() => setTyped((prev) => prev + "u"), 900);
+    setTimeout(() => setTyped((prev) => prev + "t"), 1000);
     setTimeout(() => {
-      const action = actions("help");
+      const action = actions("about");
       setCommands((prev) => [...prev, action]);
       setTyped("");
-    }, 3000);
+    }, 2500);
   }, []);
 };
 
