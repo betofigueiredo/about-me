@@ -7,6 +7,10 @@ export default {
         sans: ["'Inter Variable', sans-serif"],
         serif: ["'Crimson Pro Variable', serif"],
       },
+      colors: {
+        "custom-green": "#70DBD0",
+        "custom-grey": "#909DAB",
+      },
     },
   },
   plugins: [],
