@@ -5,7 +5,7 @@ function Menu() {
 
   const isItemActive = {
     home: pathname === "/",
-    writing: pathname.includes("/blog"),
+    blog: pathname.includes("/blog"),
     about: pathname === "/about",
   };
 
@@ -13,7 +13,7 @@ function Menu() {
   const homeClass = isItemActive.home
     ? `${baseClass} text-black`
     : `${baseClass} text-[#48515A]`;
-  const writingClass = isItemActive.writing
+  const blogClass = isItemActive.blog
     ? `${baseClass} text-black`
     : `${baseClass} text-[#48515A]`;
   const aboutClass = isItemActive.about
@@ -36,10 +36,10 @@ function Menu() {
         </li>
         <li className="text-[#C7C7C7]">/</li>
         <li className="relative">
-          <Link to="/blog" className={writingClass}>
-            Writing
+          <Link to="/blog" className={blogClass}>
+            blog
           </Link>
-          {isItemActive.writing && (
+          {isItemActive.blog && (
             <div className="absolute w-full h-2 bg-[#FFFF81] -mt-2 -z-10" />
           )}
         </li>

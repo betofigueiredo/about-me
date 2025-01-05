@@ -5,7 +5,8 @@ const best_quality_in_a_software_developer = {
   draft: false,
   slug: "best-quality-in-a-software-developer",
   title: "Best quality in a software developer",
-  subtitle: "Best quality in a developer",
+  subtitle:
+    "If you were hiring a developer today, what would be the primary quality you'd look for in that person?",
   tags: ["work"],
   publishedAt: "2025-01-03",
   content: (
