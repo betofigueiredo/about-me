@@ -24,6 +24,9 @@ function RouteComponent() {
         {post.title}
       </h1>
       {post.content}
+      {post.tags.map((tag) => (
+        <span key={tag}>#{tag}</span>
+      ))}
     </div>
   );
 }

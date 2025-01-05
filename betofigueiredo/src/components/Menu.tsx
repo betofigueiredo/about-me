@@ -22,9 +22,13 @@ function Menu() {
 
   return (
     <div className="text-center mb-14">
-      <div className="mt-8 mb-5 font-display text-center text-xl text-[#575757]">
-        Beto Figueiredo
-      </div>
+      {!isItemActive.home ? (
+        <div className="mt-8 mb-5 font-display text-center text-xl text-[#575757]">
+          Beto Figueiredo
+        </div>
+      ) : (
+        <div className="h-20" />
+      )}
       <ul className="flex justify-center space-x-4 text-sm uppercase font-sans font-medium tracking-widest">
         <li className="relative">
           <Link to="/" className={homeClass}>
