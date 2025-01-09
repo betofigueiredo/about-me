@@ -1,16 +1,21 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { Content } from "../customTypes";
 import contents from "../contents/index";
 import dates from "../utils/dates";
 
 type Props = { limit?: number };
 
 const BlogList: FC<Props> = ({ limit }) => {
-  let publishedContents = contents.filter((content) => !content.draft);
+  const [publishedContents, setPublishedContents] = useState<Content[]>([]);
 
-  if (limit) {
-    publishedContents = publishedContents.slice(0, limit);
-  }
+  useEffect(() => {
+    let contentsList = contents.filter((content) => !content.draft);
+    if (limit) {
+      contentsList = contentsList.slice(0, limit);
+    }
+    setPublishedContents(contentsList);
+  }, [limit]);
 
   return (
     <div>

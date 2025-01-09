@@ -22,7 +22,7 @@ const best_quality_in_a_software_developer = {
       </P>
       <P>
         Many people emphasize adaptability and the ability to reinvent oneself
-        constantly. While that's an important trait, in my view, the most
+        constantly. While that's an important trait, in my view, one of the most
         significant quality in a developer is{" "}
         <strong>the ability to analyze cost versus benefit</strong>. In short,
         the ability to make good decisions.
