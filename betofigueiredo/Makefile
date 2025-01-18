@@ -32,6 +32,7 @@ help:
 	@echo "	"
 	@echo "	  $(BLUE)PRODUCTION$(NC)"
 	@echo "	  make $(GREEN)build$(NC)                  Builds the production dist"
+	@echo "	  make $(GREEN)preview$(NC)                Show build preview"
 	@echo "	  make $(GREEN)deploy$(NC)                 Deploys the production dist"
 	@echo "	"
 	@echo "	  $(BLUE)GENERAL$(NC)"
@@ -73,6 +74,10 @@ dev:
 .PHONY: build
 build:
 	pnpm run build
+
+.PHONY: preview
+preview:
+	pnpm run preview
 
 .PHONY: deploy
 deploy:
