@@ -66,6 +66,10 @@ decrypt-envs:
 	cd scripts; \
 	uv run decrypt_envs.py
 
+.PHONY: dev
+dev:
+	pnpm run dev
+
 .PHONY: build
 build:
 	pnpm run build
@@ -76,6 +80,10 @@ deploy:
 	make decrypt-envs; \
 	rsync -azP --delete api/ $(SSH_USER)@$(SSH_HOST):$(SSH_FOLDER); \
 	rm .env
+
+.PHONY: lint
+lint:
+	pnpm run lint
 
 .PHONY: ssh
 ssh:
