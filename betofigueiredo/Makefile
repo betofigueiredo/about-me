@@ -83,7 +83,7 @@ preview:
 deploy:
 	make check-encrypted-envs; \
 	make decrypt-envs; \
-	rsync -azP --delete api/ $(SSH_USER)@$(SSH_HOST):$(SSH_FOLDER); \
+	rsync -azP --delete dist/ $(SSH_USER)@$(SSH_HOST):$(SSH_FOLDER); \
 	rm .env
 
 .PHONY: lint
@@ -94,5 +94,5 @@ lint:
 ssh:
 	make check-encrypted-envs; \
 	make decrypt-envs; \
-	ssh $(SSH_USER)@$(SSH_HOST):$(SSH_FOLDER)
+	ssh $(SSH_USER)@$(SSH_HOST)
 	rm .env
