@@ -1,0 +1,12 @@
+services:
+  api:
+    container_name: php_apache
+    hostname: php_apache
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8002:8002"
+    restart: on-failure
+    volumes:
+      - ./src:/var/www/html/

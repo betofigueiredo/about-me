@@ -1,0 +1,23 @@
+RewriteEngine On
+RewriteBase /
+
+# index
+RewriteRule ^index$ /index.php [L]
+
+# about
+RewriteRule ^about$ /about.php [L]
+RewriteRule ^about/$ /about.php [L]
+
+# blog
+RewriteRule ^blog$ /blog.php [L]
+RewriteRule ^blog/$ /blog.php [L]
+RewriteRule ^blog/([a-zA-Z0-9_-]+)$ /contents/$1.php [L]
+
+# hire
+RewriteRule ^hire$ /hire.php [L]
+RewriteRule ^hire/$ /hire.php [L]
+
+# Redirect all other routes to 404.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /404.php [L]
