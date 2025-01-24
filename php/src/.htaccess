@@ -11,11 +11,16 @@ RewriteRule ^about/$ /about.php [L]
 # blog
 RewriteRule ^blog$ /blog.php [L]
 RewriteRule ^blog/$ /blog.php [L]
-RewriteRule ^blog/([a-zA-Z0-9_-]+)$ /contents/$1.php [L]
+RewriteRule ^blog/([a-zA-Z0-9_-]+)$ /posts/$1.php [L]
 
 # hire
 RewriteRule ^hire$ /hire.php [L]
 RewriteRule ^hire/$ /hire.php [L]
+
+# block folders
+RewriteRule ^constants/(.*).php$ /404.php [L]
+RewriteRule ^includes/(.*).php$ /404.php [L]
+RewriteRule ^utils/(.*).php$ /404.php [L]
 
 # Redirect all other routes to 404.php
 RewriteCond %{REQUEST_FILENAME} !-f

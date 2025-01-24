@@ -1,10 +1,10 @@
 <?php
-$draft = false;
 $slug = "best-quality-in-a-software-developer";
 $title = "Best quality in a software developer";
 $subtitle = "If you were hiring a developer today, what would be the primary quality you'd look for in that person?";
 $tags = array("work");
 $publishedAt = "January 3, 2025";
+$draft = false;
 ?>
 
 <!doctype html>
