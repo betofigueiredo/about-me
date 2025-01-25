@@ -24,7 +24,7 @@
 
       <div className="mt-20">
         <?php
-        // TODO: limit 5
+        // TODO: pagination
         include_once('constants/posts.php');
         foreach ($postsList as $post):
         ?>
