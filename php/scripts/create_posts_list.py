@@ -18,8 +18,16 @@ for post_file in posts_files:
             if line_number in [2, 3, 4, 5, 6, 7]:
                 division = line.find(" = ")
                 key = line[:division].replace("$", "")
-                value = line[division + 3 :].strip().replace(";", "").replace('"', "")
-                result += f'    "{value}",\n'
+
+                if key == "draft" or key == "tags":
+                    value = line[division + 3 :].strip().replace(";", "")
+                    result += f"    {value},\n"
+                else:
+                    value = (
+                        line[division + 3 :].strip().replace(";", "").replace('"', "")
+                    )
+                    result += f'    "{value}",\n'
+
             line_number += 1
         result += "  ),\n"
 

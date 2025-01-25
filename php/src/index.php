@@ -37,15 +37,30 @@
         <h4 class="mb-10 text-sm uppercase font-sans font-medium tracking-widest text-[#48515A]">
           Blog
         </h4>
-
         <?php
-        // limit 5
+        // TODO: limit 5
         include_once('constants/posts.php');
-        foreach ($postsList as $post) {
-          echo $post->title;
-          echo "<br>";
-        }
+        foreach ($postsList as $post):
         ?>
+        <div class="mb-12">
+          <p class="mb-1 text-sm text-gray-600 tracking-wider">
+            <?php echo $post->publishedAt; ?>
+          </p>
+          <p class="mb-1 text-4xl font-bold text-[#212830] font-display">
+            <a href="/blog/<?php echo $post->slug; ?>" class="hover:text-[#475763] transition-all">
+              <?php echo $post->title; ?>
+            </a>
+          </p>
+          <p class="mb-1 text-gray-600 font-serif">
+            <?php echo $post->subtitle; ?>
+          </p>
+          <p class="font-serif">
+            <?php foreach ($post->tags as $tag): ?>
+              <span>#<?php echo $tag; ?></span>
+            <?php endforeach; ?>
+          </p>
+        </div>
+        <?php endforeach; ?>
       </div>
 
       <?php include_once('includes/footer.php'); ?>

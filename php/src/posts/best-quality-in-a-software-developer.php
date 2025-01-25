@@ -32,12 +32,12 @@ $draft = false;
     <meta name="twitter:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast">
     <meta name="twitter:image" content="">
     <title><?php echo $title; ?> | Beto Figueiredo</title>
-    <?php include_once('../../includes/assets.php'); ?>
+    <?php include_once('../includes/assets.php'); ?>
   </head>
 
   <body>
     <div class="container mx-auto text-left">
-      <?php include_once('../../includes/menu.php'); ?>
+      <?php include_once('../includes/menu.php'); ?>
 
       <p class="mt-24 text-center text-sm text-gray-700 tracking-wider">
         <?php echo $publishedAt; ?>
@@ -113,7 +113,7 @@ $draft = false;
       }
       ?>
 
-      <?php include_once('../../includes/footer.php'); ?>
+      <?php include_once('../includes/footer.php'); ?>
     </div>
   </body>
 </html>

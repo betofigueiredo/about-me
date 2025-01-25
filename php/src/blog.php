@@ -22,7 +22,32 @@
     <div class="container mx-auto text-left">
       <?php include_once('includes/menu.php'); ?>
 
-      <div>blog</div>
+      <div className="mt-20">
+        <?php
+        // TODO: limit 5
+        include_once('constants/posts.php');
+        foreach ($postsList as $post):
+        ?>
+        <div class="mb-12">
+          <p class="mb-1 text-sm text-gray-600 tracking-wider">
+            <?php echo $post->publishedAt; ?>
+          </p>
+          <p class="mb-1 text-4xl font-bold text-[#212830] font-display">
+            <a href="/blog/<?php echo $post->slug; ?>" class="hover:text-[#475763] transition-all">
+              <?php echo $post->title; ?>
+            </a>
+          </p>
+          <p class="mb-1 text-gray-600 font-serif">
+            <?php echo $post->subtitle; ?>
+          </p>
+          <p class="font-serif">
+            <?php foreach ($post->tags as $tag): ?>
+              <span>#<?php echo $tag; ?></span>
+            <?php endforeach; ?>
+          </p>
+        </div>
+        <?php endforeach; ?>
+      </div>
 
       <?php include_once('includes/footer.php'); ?>
     </div>
