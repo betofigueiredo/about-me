@@ -1,8 +1,9 @@
 <?php
 $slug = "best-quality-in-a-software-developer";
 $title = "Best quality in a software developer";
-$subtitle = "If you were hiring a developer today, what would be the primary quality you'd look for in that person?";
-$tags = array("work");
+$subtitle =
+    "If you were hiring a developer today, what would be the primary quality you'd look for in that person?";
+$tags = ["work"];
 $publishedAt = "January 3, 2025";
 $draft = false;
 ?>
@@ -15,29 +16,28 @@ $draft = false;
     <link rel="apple-touch-icon" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Beto Figueiredo" />
-    <meta name="description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast">
+    <meta name="description" content="<?php echo $subtitle; ?>">
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://betofigueiredo.com/blog/best-quality-in-a-software-developer">
+    <meta property="og:url" content="https://betofigueiredo.com/blog/<?php echo $slug; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Beto Figueiredo">
-    <meta property="og:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast">
-    <meta property="og:image" content="">
+    <meta property="og:title" content="<?php echo $title; ?> | Beto Figueiredo">
+    <meta property="og:description" content="<?php echo $subtitle; ?>">
+    <meta property="og:image" content="<?php echo $slug; ?>-cover.jpg">
 
-    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="betofigueiredo.com">
-    <meta property="twitter:url" content="https://betofigueiredo.com/blog/best-quality-in-a-software-developer">
-    <meta name="twitter:title" content="Beto Figueiredo">
-    <meta name="twitter:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast">
-    <meta name="twitter:image" content="">
+    <meta property="twitter:url" content="https://betofigueiredo.com/blog/<?php echo $slug; ?>">
+    <meta name="twitter:title" content="<?php echo $title; ?> | Beto Figueiredo">
+    <meta name="twitter:description" content="<?php echo $subtitle; ?>">
+    <meta name="twitter:image" content="<?php echo $slug; ?>-cover.jpg">
+
     <title><?php echo $title; ?> | Beto Figueiredo</title>
-    <?php include_once('../includes/assets.php'); ?>
+    <?php include_once "../includes/assets.php"; ?>
   </head>
 
   <body>
     <div class="container mx-auto text-left">
-      <?php include_once('../includes/menu.php'); ?>
+      <?php include_once "../includes/menu.php"; ?>
 
       <p class="mt-24 text-center text-sm text-gray-700 tracking-wider">
         <?php echo $publishedAt; ?>
@@ -60,7 +60,7 @@ $draft = false;
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Many people emphasize adaptability and the ability to reinvent oneself
         constantly. While that's an important trait, in my view, one of the most
-        significant quality in a developer is 
+        significant quality in a developer is
         <strong>the ability to analyze cost versus benefit</strong>. In short,
         the ability to make good decisions.
       </p>
@@ -107,13 +107,25 @@ $draft = false;
         better decisions.
       </p>
 
-      <?php
-      foreach ($tags as $tag) {
-        echo "#" . $tag;
-      }
-      ?>
+      <?php foreach ($tags as $tag) {
+          echo "#" . $tag;
+      } ?>
 
-      <?php include_once('../includes/footer.php'); ?>
+      <div class="mx-auto w-44 h-[1px] mt-16 mb-16 bg-[#C5C5C5]"></div>
+      <div class="flex justify-between space-x-4 text-sm uppercase font-sans font-medium tracking-widest">
+        <div>
+            <?php
+            include_once "../constants/posts.php";
+            include_once "../utils/utils.php";
+            getPreviousPost($slug, $postsList);
+            ?>
+        </div>
+        <div>
+            <?php getNextPost($slug, $postsList); ?>
+        </div>
+      </div>
+
+      <?php include_once "../includes/footer.php"; ?>
     </div>
   </body>
 </html>

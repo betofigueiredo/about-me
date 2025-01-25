@@ -1,8 +1,9 @@
 <?php
 $slug = "be-careful-about-your-dependencies";
 $title = "Be careful about your dependencies";
-$subtitle = "The tragedy of an old Node project and the trap of dependencies in JavaScript projects.";
-$tags = array("work");
+$subtitle =
+    "The tragedy of an old Node project and the trap of dependencies in JavaScript projects.";
+$tags = ["work"];
 $publishedAt = "January 18, 2025";
 $draft = false;
 ?>
@@ -15,29 +16,28 @@ $draft = false;
     <link rel="apple-touch-icon" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Beto Figueiredo" />
-    <meta name="description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast">
+    <meta name="description" content="<?php echo $subtitle; ?>">
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://betofigueiredo.com/blog/best-quality-in-a-software-developer">
+    <meta property="og:url" content="https://betofigueiredo.com/blog/<?php echo $slug; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Beto Figueiredo">
-    <meta property="og:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast">
-    <meta property="og:image" content="">
+    <meta property="og:title" content="<?php echo $title; ?> | Beto Figueiredo">
+    <meta property="og:description" content="<?php echo $subtitle; ?>">
+    <meta property="og:image" content="<?php echo $slug; ?>-cover.jpg">
 
-    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="betofigueiredo.com">
-    <meta property="twitter:url" content="https://betofigueiredo.com/blog/best-quality-in-a-software-developer">
-    <meta name="twitter:title" content="Beto Figueiredo">
-    <meta name="twitter:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast">
-    <meta name="twitter:image" content="">
+    <meta property="twitter:url" content="https://betofigueiredo.com/blog/<?php echo $slug; ?>">
+    <meta name="twitter:title" content="<?php echo $title; ?> | Beto Figueiredo">
+    <meta name="twitter:description" content="<?php echo $subtitle; ?>">
+    <meta name="twitter:image" content="<?php echo $slug; ?>-cover.jpg">
+
     <title><?php echo $title; ?> | Beto Figueiredo</title>
-    <?php include_once('../includes/assets.php'); ?>
+    <?php include_once "../includes/assets.php"; ?>
   </head>
 
   <body>
     <div class="container mx-auto text-left">
-      <?php include_once('../includes/menu.php'); ?>
+      <?php include_once "../includes/menu.php"; ?>
 
       <p class="mt-24 text-center text-sm text-gray-700 tracking-wider">
         <?php echo $publishedAt; ?>
@@ -61,7 +61,7 @@ $draft = false;
         code?
       </p>
 
-      <h2>The tragedy of an old Node project</h2>
+      <h2 class="text-3xl mt-16 mb-8 font-bold text-[#212830] font-display">The tragedy of an old Node project</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         When I first saw the code, I was surprised: it's well-organized code.
         It's not perfect — no codebase is — but it's possible to navigate it
@@ -86,7 +86,7 @@ $draft = false;
         problems are incredibly common in JavaScript projects.
       </p>
 
-      <h2>The trap of dependencies in JavaScript projects</h2>
+      <h2 class="text-3xl mt-16 mb-8 font-bold text-[#212830] font-display">The trap of dependencies in JavaScript projects</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Keeping dependencies up to date is a constant challenge in large
         projects. Often, this task is postponed. It's hard to find time for it
@@ -107,7 +107,7 @@ $draft = false;
         greater the cost of fixing it.
       </p>
 
-      <h2>Don't neglect the foundation of your software</h2>
+      <h2 class="text-3xl mt-16 mb-8 font-bold text-[#212830] font-display">Don't neglect the foundation of your software</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Many developers worry about code quality—and they should. However,
         refactoring code is a relatively simple task. Even changing a project's
@@ -122,13 +122,25 @@ $draft = false;
         support the weight of what you build on top of it.
       </p>
 
-      <?php
-      foreach ($tags as $tag) {
-        echo "#" . $tag;
-      }
-      ?>
+      <?php foreach ($tags as $tag) {
+          echo "#" . $tag;
+      } ?>
 
-      <?php include_once('../includes/footer.php'); ?>
+      <div class="mx-auto w-44 h-[1px] mt-16 mb-16 bg-[#C5C5C5]"></div>
+      <div class="flex justify-between space-x-4 text-sm uppercase font-sans font-medium tracking-widest">
+        <div>
+            <?php
+            include_once "../constants/posts.php";
+            include_once "../utils/utils.php";
+            getPreviousPost($slug, $postsList);
+            ?>
+        </div>
+        <div>
+            <?php getNextPost($slug, $postsList); ?>
+        </div>
+      </div>
+
+      <?php include_once "../includes/footer.php"; ?>
     </div>
   </body>
 </html>
