@@ -2,13 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404</title>
+    <meta name="author" content="Beto Figueiredo" />
+    <meta name="description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast" />
+    <meta name="keywords" content="software, developer, programing, javascript, python, go, senior, react, node" />
+    <meta property="og:title" content="Beto Figueiredo" />
+    <meta property="og:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast" />
+    <meta property="og:url" content="https://betofigueiredo.com" />
+    <meta name="twitter:title" content="Beto Figueiredo" />
+    <meta name="twitter:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast" />
+    <title>404 | Beto Figueiredo</title>
+
+    <?php include_once "includes/assets.php"; ?>
+
   </head>
   <body>
-    <div>
-      <h1 class="text-3xl font-bold underline">404</h1>
+    <div class="container mx-auto text-left">
+        <?php include_once "includes/menu.php"; ?>
+        <p class="mt-24 mb-10 text-4xl font-bold text-[#212830] font-display">
+            404. Page not found.
+        </p>
+        <?php include_once "includes/footer.php"; ?>
     </div>
   </body>
 </html>

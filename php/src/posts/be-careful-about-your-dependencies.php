@@ -22,14 +22,14 @@ $draft = false;
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?php echo $title; ?> | Beto Figueiredo">
     <meta property="og:description" content="<?php echo $subtitle; ?>">
-    <meta property="og:image" content="<?php echo $slug; ?>-cover.jpg">
+    <meta property="og:image" content="/assets/images/<?php echo $slug; ?>-cover.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="betofigueiredo.com">
     <meta property="twitter:url" content="https://betofigueiredo.com/blog/<?php echo $slug; ?>">
     <meta name="twitter:title" content="<?php echo $title; ?> | Beto Figueiredo">
     <meta name="twitter:description" content="<?php echo $subtitle; ?>">
-    <meta name="twitter:image" content="<?php echo $slug; ?>-cover.jpg">
+    <meta name="twitter:image" content="/assets/images/<?php echo $slug; ?>-cover.jpg">
 
     <title><?php echo $title; ?> | Beto Figueiredo</title>
     <?php include_once "../includes/assets.php"; ?>

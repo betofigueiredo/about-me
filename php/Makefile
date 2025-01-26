@@ -90,12 +90,10 @@ build:
 
 .PHONY: deploy
 deploy:
-	make check-encrypted-envs; \
-	make decrypt-envs; \
-	rsync -azP --delete dist/ $(SSH_USER)@$(SSH_HOST):$(SSH_FOLDER); \
+	make check-envs; \
+	rsync -azP --delete src/ $(SSH_USER)@$(SSH_HOST):$(SSH_FOLDER); \
 
 .PHONY: ssh
 ssh:
-	make check-encrypted-envs; \
-	make decrypt-envs; \
+	make check-envs; \
 	ssh $(SSH_USER)@$(SSH_HOST)

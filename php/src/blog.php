@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://betofigueiredo.com" />
     <meta name="twitter:title" content="Beto Figueiredo" />
     <meta name="twitter:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast" />
-    <title>Beto Figueiredo</title>
+    <title>Blog | Beto Figueiredo</title>
 
     <?php include_once "includes/assets.php"; ?>
 

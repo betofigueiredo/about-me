@@ -14,8 +14,8 @@ RewriteRule ^blog/$ /blog.php [L]
 RewriteRule ^blog/([a-zA-Z0-9_-]+)$ /posts/$1.php [L]
 
 # hire
-RewriteRule ^hire$ /hire.php [L]
-RewriteRule ^hire/$ /hire.php [L]
+# RewriteRule ^hire$ /hire.php [L]
+# RewriteRule ^hire/$ /hire.php [L]
 
 # block folders
 RewriteRule ^constants/(.*).php$ /404.php [L]
