@@ -1,11 +1,11 @@
 import os
+from getpass import getpass
 
 from helpers import encrypt, generate_key
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-
-password = input("Enter password:")
+password = getpass()
 result = []
 
 with open(f"{dir_path}/../.env", "r") as reader:
