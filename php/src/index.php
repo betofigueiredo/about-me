@@ -15,12 +15,12 @@
     <meta name="twitter:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast" />
     <title>Beto Figueiredo</title>
 
-    <?php include_once('includes/assets.php'); ?>
+    <?php include_once "includes/assets.php"; ?>
 
   </head>
   <body>
     <div class="container mx-auto text-left">
-      <?php include_once('includes/menu.php'); ?>
+      <?php include_once "includes/menu.php"; ?>
 
       <div>
         <h1 class="md:text-8xl md:leading-[1.1] text-3xl mt-40 mb-7 font-bold text-[#212830] font-display text-center">
@@ -39,9 +39,8 @@
         </h4>
         <?php
         // TODO: limit 5
-        include_once('constants/posts.php');
-        foreach ($postsList as $post):
-        ?>
+        include_once "constants/posts.php";
+        foreach ($postsList as $post): ?>
         <div class="mb-12">
           <p class="mb-1 text-sm text-gray-600 tracking-wider">
             <?php echo $post->publishedAt; ?>
@@ -60,10 +59,11 @@
             <?php endforeach; ?>
           </p>
         </div>
-        <?php endforeach; ?>
+        <?php endforeach;
+        ?>
       </div>
 
-      <?php include_once('includes/footer.php'); ?>
+      <?php include_once "includes/footer.php"; ?>
     </div>
   </body>
 </html>

@@ -15,19 +15,18 @@
     <meta name="twitter:description" content="Senior Software Developer / JavaScript & Python Specialist / Go Enthusiast" />
     <title>Beto Figueiredo</title>
 
-    <?php include_once('includes/assets.php'); ?>
+    <?php include_once "includes/assets.php"; ?>
 
   </head>
   <body>
     <div class="container mx-auto text-left">
-      <?php include_once('includes/menu.php'); ?>
+      <?php include_once "includes/menu.php"; ?>
 
-      <div className="mt-20">
+      <div class="mt-20">
         <?php
         // TODO: pagination
-        include_once('constants/posts.php');
-        foreach ($postsList as $post):
-        ?>
+        include_once "constants/posts.php";
+        foreach ($postsList as $post): ?>
         <div class="mb-12">
           <p class="mb-1 text-sm text-gray-600 tracking-wider">
             <?php echo $post->publishedAt; ?>
@@ -46,10 +45,11 @@
             <?php endforeach; ?>
           </p>
         </div>
-        <?php endforeach; ?>
+        <?php endforeach;
+        ?>
       </div>
 
-      <?php include_once('includes/footer.php'); ?>
+      <?php include_once "includes/footer.php"; ?>
     </div>
   </body>
 </html>
