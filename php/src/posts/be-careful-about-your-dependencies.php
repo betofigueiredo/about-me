@@ -79,9 +79,9 @@ $draft = false;
         chaotic, to say the least.
       </p>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
-        You might wonder how it got to this point. Management mistakes
-        undoubtedly contributed. Introducing so many different technologies that
-        perform similar functions is a clear example of poor management. And
+        You might wonder how it got to this point. Honestly, I’m not entirely sure —
+        likely a combination of numerous developers cycling in and out of the project
+        and, without a doubt, some management missteps along the way. And
         this is, obviously, an extreme case. However, dependency-related
         problems are incredibly common in JavaScript projects.
       </p>
@@ -110,10 +110,12 @@ $draft = false;
       <h2 class="text-3xl mt-16 mb-8 font-bold text-[#212830] font-display">Don't neglect the foundation of your software</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Many developers worry about code quality—and they should. However,
-        refactoring code is a relatively simple task. Even changing a project's
-        architecture is often more straightforward than managing dependency
-        updates in a disorganized environment. But updating old dependencies?
-        That's always a challenge.
+        refactoring code isn’t as difficult as it may seem. With a solid
+        understanding of the business logic and a reliable suite of tests,
+        you can refactor significant portions of your code with confidence.
+        Even changing a project's architecture is often more straightforward
+        than dealing with dependency updates in a poorly organized environment.
+        Dependencies are always a challenge.
       </p>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Don't neglect them. Take care of your dependencies from the start. Keep
