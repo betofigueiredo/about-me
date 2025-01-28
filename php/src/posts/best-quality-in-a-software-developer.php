@@ -1,11 +1,13 @@
 <?php
 $slug = "best-quality-in-a-software-developer";
 $title = "Best quality in a software developer";
-$subtitle =
-    "If you were hiring a developer today, what would be the primary quality you'd look for in that person?";
+$subtitle = `If you were hiring a developer today, what would be the primary quality you'd look for in that person?`;
 $tags = ["work"];
-$publishedAt = "January 3, 2025";
+$publishedAt = "2025-01-03";
 $draft = false;
+
+include_once "../constants/posts.php";
+include_once "../utils/utils.php";
 ?>
 
 <!doctype html>
@@ -40,7 +42,7 @@ $draft = false;
       <?php include_once "../includes/menu.php"; ?>
 
       <p class="mt-24 text-center text-sm text-gray-700 tracking-wider">
-        <?php echo $publishedAt; ?>
+        <?php echo formatDate($publishedAt); ?>
       </p>
       <h1 class="md:text-8xl md:leading-[1.1] text-3xl mt-8 mb-14 font-bold text-[#212830] font-display text-center">
         <?php echo $title; ?>
@@ -114,11 +116,7 @@ $draft = false;
       <div class="mx-auto w-44 h-[1px] mt-16 mb-16 bg-[#C5C5C5]"></div>
       <div class="flex justify-between space-x-4 text-sm uppercase font-sans font-medium tracking-widest">
         <div>
-            <?php
-            include_once "../constants/posts.php";
-            include_once "../utils/utils.php";
-            getPreviousPost($slug, $postsList);
-            ?>
+            <?php getPreviousPost($slug, $postsList); ?>
         </div>
         <div>
             <?php getNextPost($slug, $postsList); ?>

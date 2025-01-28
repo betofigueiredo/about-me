@@ -31,6 +31,7 @@ help:
 	@echo "	  $(BLUE)DEVELOPMENT$(NC)"
 	@echo "	  make $(GREEN)dev$(NC)                    Starts development mode"
 	@echo "	  make $(GREEN)stop$(NC)                   Stop development mode"
+	@echo "	  make $(GREEN)populate-posts$(NC)         Create posts.php constants from posts folder"
 	@echo "	"
 	@echo "	  $(BLUE)PRODUCTION$(NC)"
 	@echo "	  make $(GREEN)build$(NC)                  Builds the production dist"
@@ -76,6 +77,11 @@ dev:
 .PHONY: stop
 stop:
 	docker compose down
+
+.PHONY: populate-posts
+populate-posts:
+	cd scripts; \
+	uv run create_posts_list.py
 
 .PHONY: build
 build:

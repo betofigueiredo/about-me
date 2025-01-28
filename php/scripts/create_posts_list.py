@@ -24,7 +24,7 @@ for post_file in posts_files:
                     result += f"    {value},\n"
                 else:
                     value = (
-                        line[division + 3 :].strip().replace(";", "").replace('"', "")
+                        line[division + 3 :].strip().replace(";", "").replace('"', "").replace('`', "")
                     )
                     result += f'    "{value}",\n'
 

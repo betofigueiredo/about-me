@@ -26,10 +26,12 @@
         <?php
         // TODO: pagination
         include_once "constants/posts.php";
+        include_once "utils/utils.php";
+
         foreach ($postsList as $post): ?>
         <div class="mb-12">
           <p class="mb-1 text-sm text-gray-600 tracking-wider">
-            <?php echo $post->publishedAt; ?>
+            <?php echo formatDate($post->publishedAt); ?>
           </p>
           <p class="mb-1 text-4xl font-bold text-[#212830] font-display">
             <a href="/blog/<?php echo $post->slug; ?>" class="hover:text-[#475763] transition-all">

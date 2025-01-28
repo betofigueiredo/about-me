@@ -1,11 +1,13 @@
 <?php
 $slug = "be-careful-about-your-dependencies";
 $title = "Be careful about your dependencies";
-$subtitle =
-    "The tragedy of an old Node project and the trap of dependencies in JavaScript projects.";
+$subtitle = `The tragedy of an old Node project and the trap of dependencies in JavaScript projects.`;
 $tags = ["work"];
-$publishedAt = "January 18, 2025";
+$publishedAt = "2025-01-18";
 $draft = false;
+
+include_once "../constants/posts.php";
+include_once "../utils/utils.php";
 ?>
 
 <!doctype html>
@@ -40,7 +42,7 @@ $draft = false;
       <?php include_once "../includes/menu.php"; ?>
 
       <p class="mt-24 text-center text-sm text-gray-700 tracking-wider">
-        <?php echo $publishedAt; ?>
+        <?php echo formatDate($publishedAt); ?>
       </p>
       <h1 class="md:text-8xl md:leading-[1.1] text-3xl mt-8 mb-14 font-bold text-[#212830] font-display text-center">
         <?php echo $title; ?>
@@ -131,11 +133,7 @@ $draft = false;
       <div class="mx-auto w-44 h-[1px] mt-16 mb-16 bg-[#C5C5C5]"></div>
       <div class="flex justify-between space-x-4 text-sm uppercase font-sans font-medium tracking-widest">
         <div>
-            <?php
-            include_once "../constants/posts.php";
-            include_once "../utils/utils.php";
-            getPreviousPost($slug, $postsList);
-            ?>
+            <?php getPreviousPost($slug, $postsList); ?>
         </div>
         <div>
             <?php getNextPost($slug, $postsList); ?>

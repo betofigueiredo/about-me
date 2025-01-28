@@ -61,4 +61,10 @@ function getNextPost($currentPostSlug, $postsList)
         }
     }
 }
+
+function formatDate($date)
+{
+    $data = new DateTime($date);
+    return $data->format("F j, Y");
+}
 ?>
