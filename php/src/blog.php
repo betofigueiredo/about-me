@@ -19,7 +19,7 @@
 
   </head>
   <body>
-    <div class="container mx-auto text-left">
+    <div class="container px-5 mx-auto text-left">
       <?php include_once "includes/menu.php"; ?>
 
       <div class="mt-20">

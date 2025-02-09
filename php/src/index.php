@@ -19,18 +19,18 @@
 
   </head>
   <body>
-    <div class="container mx-auto text-left">
+    <div class="container px-5 mx-auto text-left">
       <?php include_once "includes/menu.php"; ?>
 
       <div>
-        <h1 class="md:text-8xl md:leading-[1.1] text-3xl mt-40 mb-7 font-bold text-[#212830] font-display text-center">
+        <h1 class="md:text-8xl md:leading-[1.1] text-5xl mt-40 mb-7 font-bold text-[#212830] font-display text-center">
           Beto Figueiredo
         </h1>
         <div class="relative text-center text-sm uppercase font-sans font-medium tracking-widest text-[#48515A]">
-          Senior Software Developer / <strong>JavaScript</strong> &
-          <strong>Python</strong> Specialist / <strong>Go</strong> Enthusiast
-          <div class="absolute top-3 left-[360px] w-52 h-2 bg-[#ffffa8] -z-10"></div>
-          <div class="absolute top-3 left-[674px] w-10 h-2 bg-[#ffffa8] -z-10"></div>
+          Senior Software Developer / <span class="relative inline-block">
+            <strong>JavaScript</strong> & <strong>Python</strong>
+            <div class="absolute top-3 left-0 w-48 h-2 bg-[#ffffa8] -z-10"></div>
+          </span> Specialist / <span class="relative"><strong>Go<div class="absolute top-3 left-0 w-6 h-2 bg-[#ffffa8] -z-10"></div></strong></span> Enthusiast
         </div>
       </div>
       <div class="mt-40">

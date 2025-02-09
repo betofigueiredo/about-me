@@ -38,7 +38,7 @@ include_once "../utils/utils.php";
   </head>
 
   <body>
-    <div class="container mx-auto text-left">
+    <div class="container px-5 mx-auto text-left">
       <?php include_once "../includes/menu.php"; ?>
 
       <p class="mt-24 text-center text-sm text-gray-700 tracking-wider">

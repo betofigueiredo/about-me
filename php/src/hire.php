@@ -19,7 +19,7 @@
 
   </head>
   <body>
-    <div class="container mx-auto text-left">
+    <div class="container px-5 mx-auto text-left">
       <?php include_once "includes/menu.php"; ?>
 
       <h2 class="text-4xl mt-24 mb-8 font-bold text-[#212830] font-display">How I'll Make a Difference</h2>
