@@ -63,7 +63,7 @@ include_once "../utils/utils.php";
         code?
       </p>
 
-      <h2 class="text-3xl mt-16 mb-8 font-bold text-[#212830] font-display">The tragedy of an old Node project</h2>
+      <h2 class="text-4xl mt-16 mb-8 font-bold text-[#212830] font-display">The tragedy of an old Node project</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         When I first saw the code, I was surprised: it's well-organized code.
         It's not perfect — no codebase is — but it's possible to navigate it
@@ -88,7 +88,7 @@ include_once "../utils/utils.php";
         problems are incredibly common in JavaScript projects.
       </p>
 
-      <h2 class="text-3xl mt-16 mb-8 font-bold text-[#212830] font-display">The trap of dependencies in JavaScript projects</h2>
+      <h2 class="text-4xl mt-16 mb-8 font-bold text-[#212830] font-display">The trap of dependencies in JavaScript projects</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Keeping dependencies up to date is a constant challenge in large
         projects. Often, this task is postponed. It's hard to find time for it
@@ -109,7 +109,7 @@ include_once "../utils/utils.php";
         greater the cost of fixing it.
       </p>
 
-      <h2 class="text-3xl mt-16 mb-8 font-bold text-[#212830] font-display">Don't neglect the foundation of your software</h2>
+      <h2 class="text-4xl mt-16 mb-8 font-bold text-[#212830] font-display">Don't neglect the foundation of your software</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Many developers worry about code quality—and they should. However,
         refactoring code isn’t as difficult as it may seem. With a solid

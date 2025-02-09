@@ -41,7 +41,7 @@
       </h4>
 
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
-        I'm a simple man with just two hobbies: <strong>sports</strong> and
+        I have two hobbies: <strong>sports</strong> and
         <strong>literature</strong>. I practice rock climbing, brazilian
         Jiu-Jitsu and surfing.
       </p>
@@ -52,7 +52,7 @@
           href="https://www.instagram.com/_betofigueiredo"
           target="_blank"
           rel="noopener"
-          class="hover:text-black text-[#48515A]"
+          class="hover:text-[#b8b836] underline text-[#959544] transition-all"
         >
           Instagram
         </a>
@@ -61,13 +61,13 @@
           href="https://www.goodreads.com/betofigueiredo"
           target="_blank"
           rel="noopener"
-          class="hover:text-black text-[#48515A]"
+          class="hover:text-[#b8b836] underline text-[#959544] transition-all"
         >Goodreads</a>. Also have some old videos here:
         <a
           href="https://vimeo.com/beto"
           target="_blank"
           rel="noopener"
-          class="hover:text-black text-[#48515A]"
+          class="hover:text-[#b8b836] underline text-[#959544] transition-all"
         >
           https://vimeo.com/beto
         </a>
