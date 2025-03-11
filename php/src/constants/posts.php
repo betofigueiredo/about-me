@@ -4,7 +4,7 @@ require __DIR__ . "/../utils/utils.php";
 $postsList = [
     createPost(
         "best-quality-in-a-software-developer",
-        "Best quality in a software developer",
+        "Best Quality in a Software Developer",
         "If you were hiring a developer today, what would be the primary quality you'd look for in that person?",
         ["work"],
         "2025-01-03",
@@ -28,7 +28,7 @@ $postsList = [
     ),
     createPost(
         "be-careful-about-your-dependencies",
-        "Be careful about your dependencies",
+        "Be Careful About Your Dependencies",
         "The tragedy of an old Node project and the trap of dependencies in JavaScript projects.",
         ["work"],
         "2025-01-18",

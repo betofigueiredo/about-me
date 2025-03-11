@@ -1,6 +1,6 @@
 <?php
 $slug = "best-quality-in-a-software-developer";
-$title = "Best quality in a software developer";
+$title = "Best Quality in a Software Developer";
 $subtitle = `If you were hiring a developer today, what would be the primary quality you'd look for in that person?`;
 $tags = ["work"];
 $publishedAt = "2025-01-03";
