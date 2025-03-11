@@ -22,7 +22,7 @@
     <div class="container px-5 mx-auto text-left">
       <?php include_once "includes/menu.php"; ?>
 
-      <p class="mt-24 mb-10 text-4xl font-bold text-[#212830] font-display">
+      <p class="mt-24 mb-10 text-4xl text-[#212830] font-display">
         My name is Herberto Figueiredo.
       </p>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">

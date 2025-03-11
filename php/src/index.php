@@ -23,7 +23,7 @@
       <?php include_once "includes/menu.php"; ?>
 
       <div>
-        <h1 class="md:text-8xl md:leading-[1.1] text-5xl mt-40 mb-7 font-bold text-[#212830] font-display text-center">
+        <h1 class="md:text-8xl md:leading-[1.1] text-5xl mt-40 mb-7 text-[#212830] font-display text-center">
           Beto Figueiredo
         </h1>
         <div class="relative text-center text-sm uppercase font-sans font-medium tracking-widest text-[#48515A]">
@@ -47,7 +47,7 @@
           <p class="mb-1 text-sm text-gray-600 tracking-wider">
             <?php echo formatDate($post->publishedAt); ?>
           </p>
-          <p class="mb-1 text-4xl font-bold text-[#212830] font-display">
+          <p class="mb-1 text-4xl text-[#212830] font-display">
             <a href="/blog/<?php echo $post->slug; ?>" class="hover:text-[#475763] transition-all">
               <?php echo $post->title; ?>
             </a>

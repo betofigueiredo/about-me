@@ -33,7 +33,7 @@
           <p class="mb-1 text-sm text-gray-600 tracking-wider">
             <?php echo formatDate($post->publishedAt); ?>
           </p>
-          <p class="mb-1 text-4xl font-bold text-[#212830] font-display">
+          <p class="mb-1 text-4xl text-[#212830] font-display">
             <a href="/blog/<?php echo $post->slug; ?>" class="hover:text-[#475763] transition-all">
               <?php echo $post->title; ?>
             </a>

@@ -19,6 +19,14 @@ $postsList = [
         false,
     ),
     createPost(
+        "reflections-on-reading",
+        "Reflections on Reading",
+        "A reader lives a thousand lives before he dies. The man who never reads lives only one.",
+        ["life"],
+        "2025-03-11",
+        false,
+    ),
+    createPost(
         "be-careful-about-your-dependencies",
         "Be careful about your dependencies",
         "The tragedy of an old Node project and the trap of dependencies in JavaScript projects.",

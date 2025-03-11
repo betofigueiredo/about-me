@@ -44,7 +44,7 @@ include_once "../utils/utils.php";
       <p class="mt-24 text-center text-sm text-gray-700 tracking-wider">
         <?php echo formatDate($publishedAt); ?>
       </p>
-      <h1 class="md:text-8xl md:leading-[1.1] text-5xl mt-8 mb-14 font-bold text-[#212830] font-display text-center">
+      <h1 class="md:text-8xl md:leading-[1.1] text-5xl mt-8 mb-14 text-[#212830] font-display text-center">
         <?php echo $title; ?>
       </h1>
       <div class="my-12 text-center">

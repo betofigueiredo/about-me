@@ -44,7 +44,7 @@ include_once "../utils/utils.php";
       <p class="mt-24 text-center text-sm text-gray-700 tracking-wider">
         <?php echo formatDate($publishedAt); ?>
       </p>
-      <h1 class="md:text-8xl md:leading-[1.1] text-5xl mt-8 mb-14 font-bold text-[#212830] font-display text-center">
+      <h1 class="md:text-8xl md:leading-[1.1] text-5xl mt-8 mb-14 text-[#212830] font-display text-center">
         <?php echo $title; ?>
       </h1>
       <div class="my-12 text-center">
@@ -58,7 +58,7 @@ include_once "../utils/utils.php";
         Despite its near-ubiquitous presence in the tech world, Scrum often fails to deliver the promised efficiency in practice. Endless meetings, inaccurate estimates, and relentless pressure—rather than fostering creativity, they drain motivation. These challenges are well known to anyone working with Scrum, but there’s an even more troubling issue, one deeply tied to estimation: <strong>the persistent feeling of failure at the end of nearly every sprint</strong>.
       </p>
 
-      <h2 class="text-4xl mt-16 mb-8 font-bold text-[#212830] font-display">Software Development Estimations are hard</h2>
+      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">Software Development Estimations are hard</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Estimating the time required for tasks in a small software project is relatively simple. There are fewer features, and the team has a solid understanding of the codebase and business rules. Challenges are easier to predict, and uncertainty is minimal when implementing new features or fixing bugs.
       </p>
@@ -69,7 +69,7 @@ include_once "../utils/utils.php";
         In this environment of uncertainty, teams are expected to precisely estimate the time for each small task and fit everything into the next two-week sprint. The result? <strong>They get the estimates wrong</strong>.
       </p>
 
-      <h2 class="text-4xl mt-16 mb-8 font-bold text-[#212830] font-display">The Feeling of Failure</h2>
+      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">The Feeling of Failure</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         It’s natural to feel disappointed when a project is poorly executed. If there’s a valid reason, you should reflect on it and aim for improvement. However, it’s concerning to see teams that worked tirelessly for two weeks, delivering 95% of the planned work with high quality, yet still feel like they failed—just because the remaining 5% wasn’t completed.
       </p>
@@ -80,7 +80,7 @@ include_once "../utils/utils.php";
         I've lost count of how many sprints ended with teams feeling demoralized over minor unfinished tasks, despite having put in tremendous effort. They shouldn’t feel that way. There’s always room for improvement, but it’s equally important to recognize and appreciate the hard work and progress made—even in the face of unexpected challenges.
       </p>
 
-      <h2 class="text-4xl mt-16 mb-8 font-bold text-[#212830] font-display">Focus on outcomes</h2>
+      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">Focus on outcomes</h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         There’s a popular saying: "Focus on the process, not the outcome." This is great advice when building habits, like exercising regularly or learning a new skill. In those cases, sticking to the process naturally leads to results over time.
       </p>
