@@ -23,7 +23,7 @@
       <?php include_once "includes/menu.php"; ?>
 
       <div>
-        <h1 class="md:text-8xl md:leading-[1.1] text-5xl mt-40 mb-7 text-[#212830] font-display text-center">
+        <h1 class="md:text-8xl md:leading-[1.1] text-5xl mt-40 mb-7 text-[#212830] font-display text-center font-bold">
           Beto Figueiredo
         </h1>
         <div class="relative text-center text-sm uppercase font-sans font-medium tracking-widest text-[#48515A]">
