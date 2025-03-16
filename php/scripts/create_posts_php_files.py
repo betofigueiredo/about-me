@@ -2,12 +2,26 @@ from os import listdir
 from os.path import dirname, isfile, join, realpath
 
 dir_path = dirname(realpath(__file__))
-posts_path = f"{dir_path}/../src/raw-posts"
 
-raw_posts_files = [f for f in listdir(posts_path) if isfile(join(posts_path, f))]
+raw_posts_path = f"{dir_path}/../src/raw-posts"
+raw_posts_files = [
+    f.replace(".md", "")
+    for f in listdir(raw_posts_path)
+    if isfile(join(raw_posts_path, f))
+]
 
-for raw_post_file in raw_posts_files:
-    with open(f"{posts_path}/{raw_post_file}", "r", encoding="utf-8") as reader:
+processed_posts_path = f"{dir_path}/../src/posts"
+processed_posts_files = [
+    f.replace(".php", "")
+    for f in listdir(processed_posts_path)
+    if isfile(join(processed_posts_path, f))
+]
+
+new_posts = [f for f in raw_posts_files if f not in processed_posts_files]
+
+
+for raw_post_file in new_posts:
+    with open(f"{raw_posts_path}/{raw_post_file}.md", "r", encoding="utf-8") as reader:
         line_number = 1
         slug = ""
         result = "<?php\n"
@@ -132,8 +146,6 @@ for raw_post_file in raw_posts_files:
         result += "  </body>\n"
         result += "</html>\n"
 
-        print(result)
-
         constants_path = f"{dir_path}/../src/posts"
-        with open(f"{constants_path}/{slug}-v2.php", "w", encoding="utf-8") as writer:
+        with open(f"{constants_path}/{slug}.php", "w", encoding="utf-8") as writer:
             writer.write(result)

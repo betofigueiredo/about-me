@@ -25,6 +25,7 @@ tasks:
   up:
     desc: Starts development mode
     cmds:
+      - google-chrome-stable http://172.18.0.2
       - docker compose up
 
   down:
@@ -33,13 +34,19 @@ tasks:
     cmds:
       - docker compose down
 
-  populate-posts:
-    desc: Create posts.php constants from posts folder
+  sync-posts:
+    desc: Sync all posts (see summary)
+    summary: |
+      Sync all posts
+      - Create php posts files from md files
+      - Create posts.php constants from posts folder
     dir: scripts
+    deps: [md-to-php]
     cmds:
       - uv run create_posts_list.py
 
   md-to-php:
+    internal: true
     desc: Create php files from md files
     dir: scripts
     cmds:

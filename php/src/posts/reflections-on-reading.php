@@ -49,7 +49,7 @@ include_once "../utils/utils.php";
       </h1>
       <div class="my-12 text-center">
         <em class="relative text-xl leading-7 text-[#212830] font-serif">
-            "A reader lives a thousand lives before he dies. The man who never reads lives only one." — George R.R. Martin.
+          "A reader lives a thousand lives before he dies. The man who never reads lives only one." — George R.R. Martin.
           <div class="absolute top-5 left-0 w-full h-2 bg-[#ffffa8] -z-10"></div>
         </em>
       </div>
@@ -57,12 +57,12 @@ include_once "../utils/utils.php";
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         I live in Brazil. We are a country that doesn't read much. According to a recent survey, 53% of people haven't read even part of a book — whether printed or digital — of any genre, including textbooks, the Bible, and religious books, in the three months prior to the survey. And it gets worse: we lost about 6.7 million readers in the past year.
       </p>
-
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         I used to be part of that statistic. I hated books when I was younger. It wasn't until I turned 20 that I began cultivating a reading habit, a shift that profoundly transformed my life.
       </p>
-
-      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">Why we don't read</h2>
+      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">
+        Why we don't read
+      </h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Our educational system is terrible. The way reading is presented to children is one of the main obstacles. During school, we read some classics of Brazilian literature. I'll never forget the first time I read "Vidas Secas" by Graciliano Ramos. I finished the book determined never to read again.
       </p>
@@ -84,8 +84,9 @@ include_once "../utils/utils.php";
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         At the beginning, the only goal should be to instill a joy for reading. Show that it can be both pleasurable and engaging. In this way, the habit is developed much more easily. And at the right time, that person will probably reach the classics.
       </p>
-
-      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">Reading, like writing, demands practice</h2>
+      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">
+        Reading, like writing, demands practice
+      </h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         I remember when I started reading "The Age of Assassins" by Vladimir Pribylovisky for the first time. At that time, my reading was limited to fiction thrillers, authors like Harlan Coben and Michael Connelly. But I found this book at my mother's house and started reading it.
       </p>
@@ -95,8 +96,9 @@ include_once "../utils/utils.php";
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         What changed between one attempt and another? My reading changed. My ability to concentrate, analyze, and focus improved. All this was due to practice. Reading, like writing, demands practice. The fact that you know how to write doesn't mean you'll be able to write a good article. The fact that you know how to read doesn't mean you'll be able to finish a complex book.
       </p>
-
-      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">The number of books you read doesn't matter</h2>
+      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">
+        The number of books you read doesn't matter
+      </h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         Don't let reading become a fetish. In a country with few readers, reading five books is already considered a great achievement. If you read 40, 50 books in a year, you're practically considered an intellectual. And this affects your ego. When you realize it, you're reading just to tell others that you've read many books.
       </p>
@@ -106,8 +108,9 @@ include_once "../utils/utils.php";
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         I'm not against reading suspense books; I also read them, but they're just entertainment. You don't acquire knowledge from them. It's better to read two excellent books in a year than to read 50 mediocre ones that are currently popular. Nobody will praise you for it, nor will you be considered a great intellectual, but you'll become a better person by the end of that year.
       </p>
-
-      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">Impact of reading on your development</h2>
+      <h2 class="text-4xl mt-16 mb-8 text-[#212830] font-display">
+        Impact of reading on your development
+      </h2>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         I don't know where I would be without the books I've read. With all my flaws, I'm proud of the person I've become, and looking back, that person wouldn't exist without the knowledge I acquired through reading. Reading deepens our knowledge and perspective on the world and about ourselves. It allows us to see things from different angles, understand the complexities of life better, and reflect on our own experiences.
       </p>
@@ -122,16 +125,16 @@ include_once "../utils/utils.php";
       </p>
 
       <?php foreach ($tags as $tag) {
-          echo "#" . $tag;
+        echo "#" . $tag;
       } ?>
 
       <div class="mx-auto w-44 h-[1px] mt-16 mb-16 bg-[#C5C5C5]"></div>
       <div class="flex justify-between space-x-4 text-sm uppercase font-sans font-medium tracking-widest">
         <div>
-            <?php getPreviousPost($slug, $postsList); ?>
+          <?php getPreviousPost($slug, $postsList); ?>
         </div>
         <div>
-            <?php getNextPost($slug, $postsList); ?>
+          <?php getNextPost($slug, $postsList); ?>
         </div>
       </div>
 
