@@ -1,5 +1,7 @@
 version: "3"
 
+dotenv: [".env", "{{.ENV}}/.env", "{{.HOME}}/.env"]
+
 tasks:
   welcome-print:
     cmds:
@@ -21,7 +23,6 @@ tasks:
     silent: true
 
   up:
-    dir: "{{.USER_WORKING_DIR}}"
     desc: Starts development mode
     cmds:
       - docker compose up
@@ -44,18 +45,36 @@ tasks:
     cmds:
       - uv run create_posts_php_files.py
 
-  build:
-    desc: Build one or all containers (see summary)
-    summary: |
-      Build one or all containers.
-      To build a specific container, pass the container name using --.
-      Ex:
-        task build -- api
-        task build -- api --no-cache
+  encrypt-envs:
+    desc: Encrypt '.env' file
+    dir: scripts
     cmds:
-      - docker compose build {{.CLI_ARGS}}
+      - uv run encrypt_envs.py
+
+  decrypt-envs:
+    desc: Decrypt '.env.encrypted' file
+    dir: scripts
+    cmds:
+      - uv run decrypt_envs.py
+
+  build-assets:
+    desc: Rebuilds the assets with a new hash
+    vars:
+      DYNAMIC_HASH:
+        sh: uuidgen | sed 's/[-]//g' | head -c 10
+    cmds:
+      - cp -a ./src/assets ./src/assets-backup
+      - rm -rf ./src/assets
+      - mkdir ./src/assets
+      - grep -rl 'fonts-[a-zA-Z0-9]\{10\}\.css' ./src/includes/css.php | xargs sed -i 's/fonts-[a-zA-Z0-9]\{10\}\.css/fonts-{{.DYNAMIC_HASH}}.css/g'
+      - grep -rl 'globals-[a-zA-Z0-9]\{10\}\.css' ./src/includes/css.php | xargs sed -i 's/globals-[a-zA-Z0-9]\{10\}\.css/globals-{{.DYNAMIC_HASH}}.css/g'
+      - find ./src/assets-backup -regextype sed -regex ".*/fonts-[a-zA-Z0-9]\{10\}\.css" -exec cp {} ./src/assets/fonts-{{.DYNAMIC_HASH}}.css \;
+      - find ./src/assets-backup -regextype sed -regex ".*/globals-[a-zA-Z0-9]\{10\}\.css" -exec cp {} ./src/assets/globals-{{.DYNAMIC_HASH}}.css \;
+      - rm -rf ./src/assets-backup
 
   deploy:
     cmds:
       - make check-envs
-      - rsync -azP --delete src/ $(SSH_USER)@$(SSH_HOST):$(SSH_FOLDER);
+      - rsync -azP --delete src/ {{.SSH_USER}}@{{.SSH_HOST}}:{{.SSH_FOLDER}};
+    preconditions:
+      - test -f .env
