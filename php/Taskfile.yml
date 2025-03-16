@@ -50,12 +50,16 @@ tasks:
     dir: scripts
     cmds:
       - uv run encrypt_envs.py
+    preconditions:
+      - test -f .env
 
   decrypt-envs:
     desc: Decrypt '.env.encrypted' file
     dir: scripts
     cmds:
       - uv run decrypt_envs.py
+    preconditions:
+      - test -f .env.encrypted
 
   build-assets:
     desc: Rebuilds the assets with a new hash
