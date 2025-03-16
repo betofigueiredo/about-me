@@ -1,0 +1,61 @@
+version: "3"
+
+tasks:
+  welcome-print:
+    cmds:
+      - cmd: echo ""
+      - cmd: echo "	██████╗ ███████╗████████╗ ██████╗  "
+      - cmd: echo "	██╔══██╗██╔════╝╚══██╔══╝██╔═══██╗ "
+      - cmd: echo "	██████╔╝█████╗     ██║   ██║   ██║ "
+      - cmd: echo "	██╔══██╗██╔══╝     ██║   ██║   ██║ "
+      - cmd: echo "	██████╔╝███████╗   ██║   ╚██████╔╝ "
+      - cmd: echo "	╚═════╝ ╚══════╝   ╚═╝    ╚═════╝  "
+      - cmd: echo "	----------------------------------"
+      - cmd: echo ""
+    silent: true
+
+  default:
+    deps: [welcome-print]
+    cmds:
+      - task -l
+    silent: true
+
+  up:
+    dir: "{{.USER_WORKING_DIR}}"
+    desc: Starts development mode
+    cmds:
+      - docker compose up
+
+  down:
+    dir: "{{.USER_WORKING_DIR}}"
+    desc: Stop development mode
+    cmds:
+      - docker compose down
+
+  populate-posts:
+    desc: Create posts.php constants from posts folder
+    dir: scripts
+    cmds:
+      - uv run create_posts_list.py
+
+  md-to-php:
+    desc: Create php files from md files
+    dir: scripts
+    cmds:
+      - uv run create_posts_php_files.py
+
+  build:
+    desc: Build one or all containers (see summary)
+    summary: |
+      Build one or all containers.
+      To build a specific container, pass the container name using --.
+      Ex:
+        task build -- api
+        task build -- api --no-cache
+    cmds:
+      - docker compose build {{.CLI_ARGS}}
+
+  deploy:
+    cmds:
+      - make check-envs
+      - rsync -azP --delete src/ $(SSH_USER)@$(SSH_HOST):$(SSH_FOLDER);
