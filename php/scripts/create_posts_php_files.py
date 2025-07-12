@@ -1,5 +1,6 @@
 from os import listdir
 from os.path import dirname, isfile, join, realpath
+import re
 
 dir_path = dirname(realpath(__file__))
 
@@ -111,6 +112,8 @@ for raw_post_file in new_posts:
 
             else:
                 content = line[:-1]
+                # replace links
+                content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" target="_blank" rel="noopener" class="hover:text-[#b8b836] underline text-[#959544] transition-all">\1</a>', content)
                 is_paragraph = content != "" and content[0] != "#"
                 is_subtitle = content != "" and content[0] == "#"
                 if is_subtitle:

@@ -27,6 +27,14 @@ $postsList = [
         false,
     ),
     createPost(
+        "the-meaning-of-life",
+        "The Meaning of Life",
+        "He who has a why to live can bear almost any how. Friedrich Nietzsche",
+        ["life"],
+        "2025-07-12",
+        false,
+    ),
+    createPost(
         "be-careful-about-your-dependencies",
         "Be Careful About Your Dependencies",
         "The tragedy of an old Node project and the trap of dependencies in JavaScript projects.",
