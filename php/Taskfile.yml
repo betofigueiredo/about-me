@@ -86,6 +86,7 @@ tasks:
       - rm -rf ./src/assets-backup
 
   deploy:
+    desc: Deploy to server
     cmds:
       - make check-envs
       - rsync -azP --delete src/ {{.SSH_USER}}@{{.SSH_HOST}}:{{.SSH_FOLDER}};
