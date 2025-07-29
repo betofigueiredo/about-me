@@ -4,6 +4,7 @@ $title = "Best Quality in a Software Developer";
 $subtitle = `If you were hiring a developer today, what would be the primary quality you'd look for in that person?`;
 $tags = ["work"];
 $publishedAt = "2025-01-03";
+$language = "en-US";
 $draft = false;
 
 include_once "../constants/posts.php";

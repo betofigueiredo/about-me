@@ -6,6 +6,8 @@ You can do everything right and still feel like you’ve lost.
 
 2025-02-09
 
+en-US
+
 > "You can do everything right and still feel like you’ve lost."
 
 Despite its near-ubiquitous presence in the tech world, Scrum often fails to deliver the promised efficiency in practice. Endless meetings, inaccurate estimates, and relentless pressure—rather than fostering creativity, they drain motivation. These challenges are well known to anyone working with Scrum, but there’s an even more troubling issue, one deeply tied to estimation: <strong>the persistent feeling of failure at the end of nearly every sprint</strong>.

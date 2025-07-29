@@ -4,6 +4,7 @@ $title = "The Biggest Problem with Scrum";
 $subtitle = `You can do everything right and still feel like you’ve lost.`;
 $tags = ["work"];
 $publishedAt = "2025-02-09";
+$language = "en-US";
 $draft = false;
 
 include_once "../constants/posts.php";

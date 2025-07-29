@@ -1,6 +1,6 @@
+import re
 from os import listdir
 from os.path import dirname, isfile, join, realpath
-import re
 
 dir_path = dirname(realpath(__file__))
 
@@ -22,7 +22,9 @@ new_posts = [f for f in raw_posts_files if f not in processed_posts_files]
 
 
 for raw_post_file in new_posts:
-    with open(f"{raw_posts_path}/{raw_post_file}.md", "r", encoding="utf-8") as reader:
+    with open(
+        f"{raw_posts_path}/{raw_post_file}.md", "r", encoding="utf-8"
+    ) as reader:
         line_number = 1
         slug = ""
         result = "<?php\n"
@@ -50,8 +52,13 @@ for raw_post_file in new_posts:
                 published_at = line[:-1]
                 result += f'$publishedAt = "{published_at}";\n'
 
+            # language
+            elif line_number == 9:
+                language = line[:-1]
+                result += f'$language = "{language}";\n'
+
             # add html and php tags
-            elif line_number == 8:
+            elif line_number == 10:
                 result += "$draft = false;\n"
                 result += "\n"
                 result += 'include_once "../constants/posts.php";\n'
@@ -62,12 +69,14 @@ for raw_post_file in new_posts:
                 result += "  <head>\n"
                 result += '    <meta charset="UTF-8" />\n'
                 result += '    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />\n'
-                result += '    <link rel="apple-touch-icon" href="/favicon.png">\n'
-                result += '    <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n'
-                result += '    <meta name="author" content="Beto Figueiredo" />\n'
                 result += (
-                    '    <meta name="description" content="<?php echo $subtitle; ?>">\n'
+                    '    <link rel="apple-touch-icon" href="/favicon.png">\n'
                 )
+                result += '    <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n'
+                result += (
+                    '    <meta name="author" content="Beto Figueiredo" />\n'
+                )
+                result += '    <meta name="description" content="<?php echo $subtitle; ?>">\n'
                 result += "\n"
                 result += '    <meta property="og:url" content="https://betofigueiredo.com/blog/<?php echo $slug; ?>">\n'
                 result += '    <meta property="og:type" content="website">\n'
@@ -75,9 +84,7 @@ for raw_post_file in new_posts:
                 result += '    <meta property="og:description" content="<?php echo $subtitle; ?>">\n'
                 result += '    <meta property="og:image" content="/assets/images/<?php echo $slug; ?>-cover.jpg">\n'
                 result += "\n"
-                result += (
-                    '    <meta name="twitter:card" content="summary_large_image">\n'
-                )
+                result += '    <meta name="twitter:card" content="summary_large_image">\n'
                 result += '    <meta property="twitter:domain" content="betofigueiredo.com">\n'
                 result += '    <meta property="twitter:url" content="https://betofigueiredo.com/blog/<?php echo $slug; ?>">\n'
                 result += '    <meta name="twitter:title" content="<?php echo $title; ?> | Beto Figueiredo">\n'
@@ -85,12 +92,16 @@ for raw_post_file in new_posts:
                 result += '    <meta name="twitter:image" content="/assets/images/<?php echo $slug; ?>-cover.jpg">\n'
                 result += "\n"
                 result += "    <title><?php echo $title; ?> | Beto Figueiredo</title>\n"
-                result += '    <?php include_once "../includes/assets.php"; ?>\n'
+                result += (
+                    '    <?php include_once "../includes/assets.php"; ?>\n'
+                )
                 result += "  </head>\n"
                 result += "\n"
                 result += "  <body>\n"
                 result += '    <div class="container px-5 mx-auto text-left">\n'
-                result += '      <?php include_once "../includes/menu.php"; ?>\n'
+                result += (
+                    '      <?php include_once "../includes/menu.php"; ?>\n'
+                )
                 result += "\n"
                 result += '      <p class="mt-24 text-center text-sm text-gray-700 tracking-wider">\n'
                 result += "        <?php echo formatDate($publishedAt); ?>\n"
@@ -100,7 +111,7 @@ for raw_post_file in new_posts:
                 result += "      </h1>\n"
 
             # quote
-            elif line_number == 9:
+            elif line_number == 11:
                 quote = line[2:-1]
                 result += '      <div class="my-12 text-center">\n'
                 result += '        <em class="relative text-xl leading-7 text-[#212830] font-serif">\n'
@@ -113,7 +124,11 @@ for raw_post_file in new_posts:
             else:
                 content = line[:-1]
                 # replace links
-                content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" target="_blank" rel="noopener" class="hover:text-[#b8b836] underline text-[#959544] transition-all">\1</a>', content)
+                content = re.sub(
+                    r"\[([^\]]+)\]\(([^)]+)\)",
+                    r'<a href="\2" target="_blank" rel="noopener" class="hover:text-[#b8b836] underline text-[#959544] transition-all">\1</a>',
+                    content,
+                )
                 is_paragraph = content != "" and content[0] != "#"
                 is_subtitle = content != "" and content[0] == "#"
                 if is_subtitle:
@@ -132,9 +147,7 @@ for raw_post_file in new_posts:
         result += '        echo "#" . $tag;\n'
         result += "      } ?>\n"
         result += "\n"
-        result += (
-            '      <div class="mx-auto w-44 h-[1px] mt-16 mb-16 bg-[#C5C5C5]"></div>\n'
-        )
+        result += '      <div class="mx-auto w-44 h-[1px] mt-16 mb-16 bg-[#C5C5C5]"></div>\n'
         result += '      <div class="flex justify-between space-x-4 text-sm uppercase font-sans font-medium tracking-widest">\n'
         result += "        <div>\n"
         result += "          <?php getPreviousPost($slug, $postsList); ?>\n"
@@ -150,5 +163,7 @@ for raw_post_file in new_posts:
         result += "</html>\n"
 
         constants_path = f"{dir_path}/../src/posts"
-        with open(f"{constants_path}/{slug}.php", "w", encoding="utf-8") as writer:
+        with open(
+            f"{constants_path}/{slug}.php", "w", encoding="utf-8"
+        ) as writer:
             writer.write(result)

@@ -6,6 +6,8 @@ A reader lives a thousand lives before he dies. The man who never reads lives on
 
 2025-03-11
 
+en-US
+
 > "A reader lives a thousand lives before he dies. The man who never reads lives only one." — George R.R. Martin.
 
 

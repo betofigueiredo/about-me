@@ -4,6 +4,7 @@ $title = "Be Careful About Your Dependencies";
 $subtitle = `The tragedy of an old Node project and the trap of dependencies in JavaScript projects.`;
 $tags = ["work"];
 $publishedAt = "2025-01-18";
+$language = "en-US";
 $draft = false;
 
 include_once "../constants/posts.php";

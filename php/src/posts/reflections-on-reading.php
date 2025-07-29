@@ -4,6 +4,7 @@ $title = "Reflections on Reading";
 $subtitle = `A reader lives a thousand lives before he dies. The man who never reads lives only one.`;
 $tags = ["life"];
 $publishedAt = "2025-03-11";
+$language = "en-US";
 $draft = false;
 
 include_once "../constants/posts.php";

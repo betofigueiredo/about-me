@@ -4,6 +4,7 @@ $title = "The Meaning of Life";
 $subtitle = `"He who has a why to live can bear almost any how." Friedrich Nietzsche`;
 $tags = ["life"];
 $publishedAt = "2025-07-12";
+$language = "en-US";
 $draft = false;
 
 include_once "../constants/posts.php";
@@ -54,6 +55,9 @@ include_once "../utils/utils.php";
         </em>
       </div>
       <div class="mx-auto w-44 h-[1px] mt-16 mb-16 bg-[#C5C5C5]"></div>
+      <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
+        <i class="text-center w-full text-base">🇧🇷 <a href="/blog/o-sentido-da-vida" target="_blank" rel="noopener" class="hover:text-[#b8b836] underline text-[#959544] transition-all">Portuguese version</a></i>
+      </p>
       <p class="text-lg mb-7 leading-8 text-[#212830] font-serif">
         A few weeks ago, I watched a documentary about mental health in extreme sports (<a href="https://www.youtube.com/watch?v=zBCxypVJIN8&ab_channel=DirtyHabits" target="_blank" rel="noopener" class="hover:text-[#b8b836] underline text-[#959544] transition-all">here</a>). The story followed a successful American kite surfer — sponsorships, travels, the so-called "dream life" that feeds Instagram feeds. But then, one day, panic attacks and depression arrived. The documentary is interesting, but it only scratches the surface of something much deeper.
       </p>

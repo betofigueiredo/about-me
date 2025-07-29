@@ -50,6 +50,8 @@ tasks:
     desc: Create php files from md files
     dir: scripts
     cmds:
+      - rm -rf ../src/posts
+      - mkdir ../src/posts
       - uv run create_posts_php_files.py
 
   encrypt-envs:

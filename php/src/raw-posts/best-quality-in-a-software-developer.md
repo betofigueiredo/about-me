@@ -6,6 +6,8 @@ If you were hiring a developer today, what would be the primary quality you'd lo
 
 2025-01-03
 
+en-US
+
 > "Deciding what not to do is as important as deciding what to do." — Steve Jobs.
 
 If you were hiring a developer today, what would be the primary quality you'd look for in that person? What characteristic do you consider essential?

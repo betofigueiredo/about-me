@@ -6,6 +6,8 @@ The tragedy of an old Node project and the trap of dependencies in JavaScript pr
 
 2025-01-18
 
+en-US
+
 > "The strength of a building lies in its foundation; without a solid base, even the grandest structure is destined to crumble."
 
 At the company where I currently work, we have a project developed many years ago that almost no one dares to update. It uses outdated technologies like Backbone and Gulp. It's the kind of project everyone avoids, always finding an excuse not to put it on the priority list. But what's the real problem? Just outdated technologies? Poorly written code?

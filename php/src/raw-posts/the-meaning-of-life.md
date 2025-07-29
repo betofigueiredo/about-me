@@ -6,7 +6,11 @@
 
 2025-07-12
 
+en-US
+
 > "He who has a why to live can bear almost any how." Friedrich Nietzsche
+
+<i class="text-center w-full text-base">🇧🇷 [Portuguese version](/blog/o-sentido-da-vida)</i>
 
 A few weeks ago, I watched a documentary about mental health in extreme sports ([here](https://www.youtube.com/watch?v=zBCxypVJIN8&ab_channel=DirtyHabits)). The story followed a successful American kite surfer — sponsorships, travels, the so-called "dream life" that feeds Instagram feeds. But then, one day, panic attacks and depression arrived. The documentary is interesting, but it only scratches the surface of something much deeper.
 
