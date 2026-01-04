@@ -27,6 +27,14 @@ $postsList = [
         false,
     ),
     createPost(
+        "throw-away-your-mvp",
+        "Throw Away Your MVP",
+        "If you are not embarrassed by the first version of your product, you've launched too late. — Reid Hoffman",
+        ["work"],
+        "2026-01-04",
+        false,
+    ),
+    createPost(
         "the-meaning-of-life",
         "The Meaning of Life",
         "He who has a why to live can bear almost any how. Friedrich Nietzsche",
